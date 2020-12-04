@@ -6,7 +6,7 @@ with open('Day 4/data.txt') as file:
 
 valid = 0
 
-fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid']
+fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
 
 def isValid(pp):
     for field in fields:
@@ -29,5 +29,3 @@ if isValid(currentPass):
     valid += 1
 
 print(valid)
-
-# Nem tudom mi a szar nem jó, de esküszöm ráeresztek egy regexet
