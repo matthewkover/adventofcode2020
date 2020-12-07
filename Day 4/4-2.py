@@ -1,6 +1,5 @@
 #Advent of Code 2020 Day 4 Part 2
 
-
 import re
 
 field_conditions = {
@@ -13,13 +12,11 @@ field_conditions = {
     'pid': lambda x: re.search('^[0-9]{9}$', x)
     }
 
-
 def check_passport(f):
     for field, condition in field_conditions.items():
         if field not in f or not condition(f[field]):
             return False
     return True
-
 
 with open("Day 4/data.txt", "r") as file:
     passports = file.read().split('\n\n')
